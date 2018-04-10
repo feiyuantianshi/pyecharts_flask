@@ -22,14 +22,14 @@ pyecharts_flask目录树
 
 
 
-模板扩展
+7.模板扩展
 
-实际上 {{ myechart|safe }} 封装的是：
-<div id="{{ chart_id }}" style="width:{{ my_width }}px;height:{{ my_height }}px;"></div>
-<script type="text/javascript">
+    实际上 {{ myechart|safe }} 封装的是：
+    <div id="{{ chart_id }}" style="width:{{ my_width }}px;height:{{ my_height }}px;"></div>
+    <script type="text/javascript">
     var myChart_{{ chart_id }} = echarts.init(document.getElementById('{{ chart_id }}'));
     var option_{{ chart_id }} = {{ my_option|safe }};
     myChart_{{ chart_id }}.setOption(option_{{ chart_id }});
-</script>
+    </script>
 
-可以在路由时传递相应的参数！
+    可以在路由时传递相应的参数！
